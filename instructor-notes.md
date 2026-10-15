@@ -141,6 +141,8 @@ as long as learners using Windows do not run into roadblocks such as:
   remain in view: [https://github.com/rgaiacs/swc-shell-split-window](https://github.com/rgaiacs/swc-shell-split-window).
 
 - Tab completion sounds like a small thing: it isn't.
+  Be sure to explain when you use tab completion while typing,
+  doing this often will allow learners to go faster and remind them of a useful technique.
   Re-running old commands using `!123` or `!wc`
   isn't a small thing either,
   and neither are wildcard expansion and `for` loops.
@@ -200,13 +202,6 @@ as long as learners using Windows do not run into roadblocks such as:
   ```bash
   PS1='$ '
   ```
-
-- On Windows machines
-  if `nano` hasn't been properly installed with the
-  [Software Carpentry Windows Installer][windows-installer]
-  it is possible to use `notepad` as an alternative.  There will be a GUI
-  interface and line endings are treated differently, but otherwise, for
-  the purposes of this lesson, `notepad` and `nano` can be used almost interchangeably.
 
 - On Windows, it appears that:
   

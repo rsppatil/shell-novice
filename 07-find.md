@@ -33,7 +33,7 @@ we will use a file that contains three haiku taken from a
 [1998 competition](https://web.archive.org/web/19991201042211/http://salon.com/21st/chal/1998/01/26chal.html)
 in *Salon* magazine (Credit to authors Bill Torcaso, Howard Korder, and
 Margaret Segall, respectively. See
-Haiku Error Messsages archived
+Haiku Error Messages archived
 [Page 1](https://web.archive.org/web/20000310061355/http://www.salon.com/21st/chal/1998/02/10chal2.html)
 and
 [Page 2](https://web.archive.org/web/20000229135138/http://www.salon.com/21st/chal/1998/02/10chal3.html)
@@ -191,10 +191,12 @@ $ grep -n -w -v "the" haiku.txt
 11:Software is like that.
 ```
 
-If we use the `-r` (recursive) option,
-`grep` can search for a pattern recursively through a set of files in subdirectories.
+Similar to how the `-r` option applies `cp` to an entire directory's contents,
+we can add `-r` (recursive) to our `grep` command
+to search for a pattern through all the files in
+a directory and its subdirectories.
 
-Let's search recursively for `Yesterday` in the `shell-lesson-data/exercise-data/writing` directory:
+Let's search for `Yesterday` in the `shell-lesson-data/exercise-data/writing` directory:
 
 ```bash
 $ grep -r Yesterday .
@@ -337,7 +339,8 @@ $1.txt
 cut -d , -f 1,3
 ```
 
-Hint: use `man grep` to look for how to grep text recursively in a directory
+Hint: use `man grep` to remind ourselves how to find text in a directory
+recursively (meaning include all subdirectories in the search)
 and `man cut` to select more than one field in a line.
 
 An example of such a file is provided in

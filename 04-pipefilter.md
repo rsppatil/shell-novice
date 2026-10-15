@@ -439,7 +439,7 @@ the algorithm is 'head of sort of line count of `*.pdb`'.
 
 The redirection and pipes used in the last few commands are illustrated below:
 
-![](fig/redirects-and-pipes.svg){alt='Redirects and Pipes of different commands: "wc -l \*.pdb" will direct theoutput to the shell. "wc -l \*.pdb > lengths" will direct output to the file"lengths". "wc -l \*.pdb | sort -n | head -n 1" will build a pipeline where theoutput of the "wc" command is the input to the "sort" command, the output ofthe "sort" command is the input to the "head" command and the output of the"head" command is directed to the shell'}
+![](fig/redirects-and-pipes.svg){alt='Redirects and Pipes of different commands: "wc -l \*.pdb" will direct the output to the shell. "wc -l \*.pdb > lengths" will direct output to the file"lengths". "wc -l \*.pdb | sort -n | head -n 1" will build a pipeline where the output of the "wc" command is the input to the "sort" command, the output of the "sort" command is the input to the "head" command and the output of the"head" command is directed to the shell'}
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -549,10 +549,12 @@ For the file `animals.csv` from the previous exercise, consider the following co
 $ cut -d , -f 2 animals.csv
 ```
 
-The `cut` command is used to remove or 'cut out' certain sections of each line in the file,
-and `cut` expects the lines to be separated into columns by a <kbd>Tab</kbd> character.
-A character used in this way is called a **delimiter**.
-In the example above we use the `-d` option to specify the comma as our delimiter character.
+The `cut` command is used to select or 'cut out' certain sections of each line in the file for
+further processing while leaving the original file unchanged.
+By default, `cut` expects the lines to be separated into columns by a <kbd>Tab</kbd> character.
+A character used in this way is called a **delimiter**.  
+In the example above we use the `-d` option to specify the comma as our delimiter character
+instead of <kbd>Tab</kbd>.
 We have also used the `-f` option to specify that we want to extract the second field (column).
 This gives the following output:
 
@@ -602,7 +604,7 @@ The `uniq` command has a `-c` option which gives a count of the
 number of times a line occurs in its input.  Assuming your current
 directory is `shell-lesson-data/exercise-data/animal-counts`,
 what command would you use to produce a table that shows
-the total count of each type of animal in the file?
+how many times each type of animal appears in the file?
 
 1. `sort animals.csv | uniq -c`
 2. `sort -t, -k2,2 animals.csv | uniq -c`
@@ -754,5 +756,3 @@ and *only* the processed data files?
 - The best way to use the shell is to use pipes to combine simple single-purpose programs (filters).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
